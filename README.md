@@ -1,4 +1,4 @@
 # ci-travis-lambdas-bm
-CI using travis in a repo that groups more than one lambda microservice
+This project has aws lambda functions grouped in only one repository, this is an approach for use travis ci with github and automatically deploy in aws lambda.
 
-# Steps to configure CI with github + travis and aws lambda
+
