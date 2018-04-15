@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+- "6.10"
+env:
+- LAMBDA_FUNCTION=lambda-function-1
+- LAMBDA_FUNCTION=lambda-function-2
+- LAMBDA_FUNCTION=lambda-function-3
+deploy:
+  provider: lambda
+  function_name: $LAMBDA_FUNCTION
+  region: "us-east-1"
+  role: $LAMBDA_ARN
+  runtime: "nodejs6.10"
+  handler_name: "handler"
+script: cd $LAMBDA_FUNCTION && npm install && npm test
